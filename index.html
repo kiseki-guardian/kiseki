@@ -1,104 +1,86 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="ja">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2575.6">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'Hiragino Mincho ProN'; -webkit-text-stroke: #000000}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'Hiragino Mincho ProN'; -webkit-text-stroke: #000000; min-height: 18.0px}
-    span.s1 {font-kerning: none}
+  <meta charset="UTF-8">
+  <title>守護神診断</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body { font-family: sans-serif; padding: 20px; background: #fff8f0; }
+    .question { display: none; }
+    .question.active { display: block; }
+    .result { display: none; }
+    button { padding: 10px 20px; margin: 10px 0; }
   </style>
 </head>
 <body>
-<p class="p1"><span class="s1">&lt;!DOCTYPE html&gt;</span></p>
-<p class="p1"><span class="s1">&lt;html lang="ja"&gt;</span></p>
-<p class="p1"><span class="s1">&lt;head&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;title&gt;神様診断&lt;/title&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;style&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>body { font-family: sans-serif; padding: 20px; background: #fff8f0; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.question { display: none; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.question.active { display: block; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.result { display: none; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>button { padding: 10px 20px; margin: 10px 0; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/head&gt;</span></p>
-<p class="p1"><span class="s1">&lt;body&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;h1&gt;3問でわかる！あなたを守る神様&lt;/h1&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;div id="q1" class="question active"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;p&gt;Q1. あなたが大切にしたい価値観は？&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;button onclick="answer('A')"&gt;調和と平和&lt;/button&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;button onclick="answer('B')"&gt;挑戦と成長&lt;/button&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;button onclick="answer('C')"&gt;愛と絆&lt;/button&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;button onclick="answer('D')"&gt;自由と直感&lt;/button&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;div id="q2" class="question"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;p&gt;Q2. 困難に直面したとき、あなたの反応は？&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;button onclick="answer('A')"&gt;周囲と調整する&lt;/button&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;button onclick="answer('B')"&gt;突破を試みる&lt;/button&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;button onclick="answer('C')"&gt;気持ちを分かち合う&lt;/button&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;button onclick="answer('D')"&gt;直感で動く&lt;/button&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;div id="q3" class="question"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;p&gt;Q3. 最近のあなたに最も当てはまるテーマは？&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;button onclick="answer('A')"&gt;人間関係の調整&lt;/button&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;button onclick="answer('B')"&gt;キャリアや目標&lt;/button&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;button onclick="answer('C')"&gt;愛情や家庭のこと&lt;/button&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;button onclick="answer('D')"&gt;進むべき道がわからない&lt;/button&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;div id="result" class="result"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;h2&gt;あなたを守る神様は...&lt;/h2&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;p id="godName"&gt;&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;p id="message"&gt;&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;a href="https://lin.ee/xxxxxxxx" target="_blank"&gt;▶ LINEで神託を受け取る&lt;/a&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;br&gt;&lt;br&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;button onclick="location.reload()"&gt;もう一度診断する&lt;/button&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;script&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>let answers = [];</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>let step = 1;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>function answer(choice) {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>answers.push(choice);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>document.getElementById(`q${step}`).classList.remove('active');</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>step++;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>if (step &lt;= 3) {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>document.getElementById(`q${step}`).classList.add('active');</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>} else {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>showResult();</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>function showResult() {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>let count = {};</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>answers.forEach(a =&gt; count[a] = (count[a] || 0) + 1);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>let result = Object.entries(count).sort((a, b) =&gt; b[1] - a[1])[0][0];</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const gods = {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>A: { name: "アマテラス（太陽神）", message: "内なる輝きと調和を信じて進んでください。" },</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>B: { name: "タケミカヅチ（雷神）", message: "行動と突破の時。勇気を出して一歩を踏み出して！" },</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>C: { name: "コノハナサクヤ姫", message: "愛と美しさがあなたの力。心を柔らかくして。" },</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>D: { name: "スサノオ（海と嵐の神）", message: "あなたには自由と変革の力がある。流れに乗って。" }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>};</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>document.getElementById("godName").textContent = gods[result].name;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>document.getElementById("message").textContent = gods[result].message;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>document.getElementById("result").style.display = "block";</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/script&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1">&lt;/body&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/html&gt;</span></p>
+
+<h1>3問でわかる！あなたを守る神様</h1>
+
+<div id="q1" class="question active">
+  <p>Q1. あなたが大切にしたい価値観は？</p>
+  <button onclick="answer('A')">調和と平和</button>
+  <button onclick="answer('B')">挑戦と成長</button>
+  <button onclick="answer('C')">愛と絆</button>
+  <button onclick="answer('D')">自由と直感</button>
+</div>
+
+<div id="q2" class="question">
+  <p>Q2. 困難に直面したとき、あなたの反応は？</p>
+  <button onclick="answer('A')">周囲と調整する</button>
+  <button onclick="answer('B')">突破を試みる</button>
+  <button onclick="answer('C')">気持ちを分かち合う</button>
+  <button onclick="answer('D')">直感で動く</button>
+</div>
+
+<div id="q3" class="question">
+  <p>Q3. 最近のあなたに最も当てはまるテーマは？</p>
+  <button onclick="answer('A')">人間関係の調整</button>
+  <button onclick="answer('B')">キャリアや目標</button>
+  <button onclick="answer('C')">愛情や家庭のこと</button>
+  <button onclick="answer('D')">進むべき道がわからない</button>
+</div>
+
+<div id="result" class="result">
+  <h2>あなたを守る神様は...</h2>
+  <p id="godName"></p>
+  <p id="message"></p>
+  <a href="https://lin.ee/xxxxxxxx" target="_blank">▶ LINEで神託を受け取る</a>
+  <br><br>
+  <button onclick="location.reload()">もう一度診断する</button>
+</div>
+
+<script>
+  let answers = [];
+  let step = 1;
+
+  function answer(choice) {
+    answers.push(choice);
+    document.getElementById(`q${step}`).classList.remove('active');
+    step++;
+    if (step <= 3) {
+      document.getElementById(`q${step}`).classList.add('active');
+    } else {
+      showResult();
+    }
+  }
+
+  function showResult() {
+    let count = {};
+    answers.forEach(a => count[a] = (count[a] || 0) + 1);
+    let result = Object.entries(count).sort((a, b) => b[1] - a[1])[0][0];
+
+    const gods = {
+      A: { name: "アマテラス（太陽神）", message: "内なる輝きと調和を信じて進んでください。" },
+      B: { name: "タケミカヅチ（雷神）", message: "行動と突破の時。勇気を出して一歩を踏み出して！" },
+      C: { name: "コノハナサクヤ姫", message: "愛と美しさがあなたの力。心を柔らかくして。" },
+      D: { name: "スサノオ（海と嵐の神）", message: "あなたには自由と変革の力がある。流れに乗って。" }
+    };
+
+    document.getElementById("godName").textContent = gods[result].name;
+    document.getElementById("message").textContent = gods[result].message;
+    document.getElementById("result").style.display = "block";
+  }
+</script>
+
 </body>
 </html>
